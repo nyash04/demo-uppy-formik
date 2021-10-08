@@ -34,10 +34,12 @@ export function UploadField(props) {
       .use(XHRUpload, { endpoint: props.endpoint, formData: true, })
   });
 
+  let URL = (process.env.NODE_ENV === 'development') ? 'http://localhost:3000' : 'http://p.yashnarola.com/uppy';
+
   if (props.isEditing) {
     // console.log('yash')
     let images = [
-      { id: 1, name: 'peacock', url: "http://localhost:3000/images/peacock.jpeg" }
+      { id: 1, name: 'peacock', url: `${URL}/images/peacock.jpeg` }
     ];
 
     // let images; 
@@ -50,7 +52,7 @@ export function UploadField(props) {
 
     images.forEach(img => {
       if (img.name && img.url) {
-        fetch(img.url)
+        fetch(img.url, { mode: 'no-cors' })
           .then((response) => response.blob())
           .then((blob) => {
             uppy.addFile({

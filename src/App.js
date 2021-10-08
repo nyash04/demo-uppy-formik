@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import { UploadField } from './UploadField';
 import { TextField } from './TextField';
 import { Formik, Form } from 'formik';
@@ -9,8 +9,9 @@ import { Formik, Form } from 'formik';
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={Add} />
       <Route path="/edit" component={Edit} />
+      <Route path="/add" component={Add} />
+      <Redirect from="/" to="/add" />
     </Switch>
   )
 }
@@ -22,8 +23,8 @@ function Add() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-8 col-lg-7 col-xl-6">
+              <Link to="/edit">Edit</Link>
               <h1 className="mb-5">Uppy</h1>
-
               <Formik
                 initialValues={{
                   name: '',
