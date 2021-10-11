@@ -22,7 +22,7 @@ function Add() {
       <section className="py-5">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-md-8 col-lg-7 col-xl-6">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-3">
               <Link to="/edit">Edit</Link>
               <h1 className="mb-5">Uppy</h1>
               <Formik
@@ -48,7 +48,7 @@ function Add() {
                   handleSubmit,
                   isSubmitting
                 }) => (
-                  <Form onSubmit={handleSubmit}>
+                  <Form onSubmit={handleSubmit} id="formOne">
                     <div className="mb-4">
                       <UploadField
                         id="one"
@@ -96,7 +96,7 @@ function Edit() {
       <section className="py-5">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-md-8 col-lg-7 col-xl-6">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-3">
               <h1 className="mb-5">Uppy</h1>
 
               <Formik
@@ -106,12 +106,11 @@ function Edit() {
                   upload: {
                     isEditing: true,
                     endpoint: 'https://wunschmieter-api-4h4sn.ondigitalocean.app/api/test-object/create',
-                    imagesEndpoint: 'https://wunschmieter-api-4h4sn.ondigitalocean.app/api/test-object/1'
+                    imagesEndpoint: 'https://wunschmieter-api-4h4sn.ondigitalocean.app/api/test-object/1',
                   }
                 }}
                 onSubmit={(values) => {
                   // console.log(values)
-                  // values.upload.isEditing = false;
                   alert(JSON.stringify(values, null, 2));
                 }}
 

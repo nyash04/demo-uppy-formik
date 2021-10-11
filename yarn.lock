@@ -2139,6 +2139,14 @@
     "@uppy/utils" "^4.0.2"
     preact "^10.5.13"
 
+"@uppy/form@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@uppy/form/-/form-2.0.3.tgz#bb810e49801b5ddb3a001aa52c0781dcfadd259c"
+  integrity sha512-CcEga3njowG0c49OcmWTCaTEZKdL2rErgqEcbzmyfLwLJa8mQwuUyAF1xRzjIzAHu20P9DjjBGdv3YvBJvrpCw==
+  dependencies:
+    "@uppy/utils" "^4.0.2"
+    get-form-data "^2.0.0"
+
 "@uppy/informer@^2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@uppy/informer/-/informer-2.0.3.tgz#44c8fbdfe1b7b5d28b5bc2bd8ef305e4914ce40c"
@@ -5511,6 +5519,11 @@ get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
+
+get-form-data@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/get-form-data/-/get-form-data-2.0.0.tgz#f211018ea617cc54678522235f0e2a9025d89411"
+  integrity sha512-YUpw0aTWeGliifqMYrTohe/YdqVmKLmaNwuscd2WlRNGfba57JHGuuvvv2c6LiZdFys285POVWANTh6SqcwFag==
 
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
   version "1.1.1"
